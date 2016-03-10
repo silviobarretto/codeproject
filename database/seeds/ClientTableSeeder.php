@@ -11,8 +11,6 @@ class ClientTableSeeder extends Seeder
      */
     public function run()
     {
-        \CodeProject\Models\Client::truncate(); //Apaga os registros da Tabela e cria novamente
-
-        factory(\CodeProject\Models\Client::class, 10)->create();
+        factory(\CodeProject\Entities\Client::class, 10)->create();
     }
 }
