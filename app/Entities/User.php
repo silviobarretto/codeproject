@@ -14,7 +14,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'password',
+        'password'
     ];
 
     /**
@@ -28,6 +28,7 @@ class User extends Authenticatable
 
     public function projects()
     {
-        return $this->belongsTo(Project::class);
+        return $this->belongsToMany(Project::class, 'project_members', 'member_id', 'project_id');
     }
+
 }
