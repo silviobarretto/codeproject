@@ -66,7 +66,7 @@ class ProjectController extends Controller
      */
     public function destroy($id)
     {
-        if($this->checkProjectOwner($id) == false) {
+        if($this->checkProjectPermissions($id) == false) {
             return ['error' => 'Access Forbidden'];
         }
         return $this->repository->delete($id);
@@ -79,7 +79,7 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        if($this->checkProjectOwner($id) == false) {
+        if($this->checkProjectPermissions($id) == false) {
             return ['error' => 'Access Forbidden'];
         }
         return $this->service->update($request->all(), $id);
