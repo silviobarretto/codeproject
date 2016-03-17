@@ -1,0 +1,29 @@
+{
+  "name": "Carreira EAD",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Silvio Barretto <silvioaabarretto@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/silviobarretto/codeproject",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "resources/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.1",
+    "angular-route": "1.5.1",
+    "angular-resource": "1.5.1",
+    "angular-animate": "1.5.1",
+    "angular-messages": "1.5.1",
+    "angular-bootstrap": "^1.2.4",
+    "angular-strap": "^2.3.7",
+    "bootstrap": "^3.3.6"
+  }
+}
