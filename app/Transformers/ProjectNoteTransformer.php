@@ -14,15 +14,17 @@ use League\Fractal\TransformerAbstract;
 
 class ProjectNoteTransformer extends TransformerAbstract
 {
-    protected $defaultIncludes = ['members'];
+    //protected $defaultIncludes = ['members'];
 
-    public function transform(ProjectNote $o)
+    public function transform(ProjectNote $model)
     {
         return [
-            'id' => $o->id,
-            'project_id' => $o->project_id,
-            'title' => $o->title,
-            'note' => $o->note,
+            'id' => $model->id,
+            'project_id' => $model->project_id,
+            'title' => $model->title,
+            'note' => $model->note,
+            'created_at' => $model->created_at,
+            'updated_at' => $model->updated_at
         ];
     }
 }

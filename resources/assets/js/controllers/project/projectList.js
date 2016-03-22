@@ -1,4 +1,5 @@
 angular.module('app.controllers')
-    .controller('ProjectListController', ['$scope', 'Project', function($scope, Project) {
+    .controller('ProjectListController', ['$scope', '$routeParams', 'Project',
+        function($scope, $routeParams, Project) {
         $scope.projects = Project.query();
     }]);

@@ -15,16 +15,18 @@ use League\Fractal\TransformerAbstract;
 class ClientTransformer extends TransformerAbstract
 {
 
-    public function transform(Client $o)
+    public function transform(Client $model)
     {
         return [
-            'id' => (int)$o->id,
-            'name' => $o->name,
-            'responsible' => $o->responsible,
-            'email' => $o->email,
-            'phone' => $o->phone,
-            'address' => $o->address,
-            'obs' => $o->obs,
+            'id' => $model->id,
+            'name' => $model->name,
+            'responsible' => $model->responsible,
+            'email' => $model->email,
+            'phone' => $model->phone,
+            'address' => $model->address,
+            'obs' => $model->obs,
+            'created_at' => $model->created_at,
+            'updated_at' => $model->updated_at
         ];
     }
 }

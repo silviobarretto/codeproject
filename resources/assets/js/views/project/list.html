@@ -13,6 +13,7 @@
                         <thead>
                             <tr>
                                 <th>Nome</th>
+                                <th>Cliente</th>
                                 <th>Descrição</th>
                                 <th>Progresso</th>
                                 <th>Status</th>
@@ -20,11 +21,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="o in projects">
-                                <td>{{o.description}}</td>
-                                <td>{{o.progress}}</td>
-                                <td>{{o.status}}</td>
-                                <td>{{o.data}}</td>
+                            <tr ng-repeat="p in projects">
+                                <td>{{p.name}}</td>
+                                <td>{{p.client.data.name}}</td>
+                                <td>{{p.description}}</td>
+                                <td>{{p.progress}}</td>
+                                <td>{{p.status}}</td>
+                                <td>{{p.due_date}}</td>
                                 <td>
                                     <a ng-href="#/projects/{{o.id}}/edit">Editar</a> |
                                     <a ng-href="#/projects/{{o.id}}/remove">Excluir</a>

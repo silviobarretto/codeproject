@@ -9,20 +9,17 @@
 namespace CodeProject\Repositories;
 
 
-use CodeProject\Entities\Client;
+use CodeProject\Entities\ProjectMember;
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use CodeProject\Presenters\ClientPresenter;
+use CodeProject\Presenters\ProjectMemberPresenter;
 
-class ClientRepositoryEloquent extends BaseRepository implements ClientRepository
+class ProjectMemberRepositoryEloquent extends BaseRepository implements ProjectMemberRepository
 {
-    protected $fieldSearchable =[
-        'name'
-    ];
 
     public function model()
     {
-        return Client::class;
+        return ProjectMember::class;
     }
 
     /**
@@ -35,6 +32,11 @@ class ClientRepositoryEloquent extends BaseRepository implements ClientRepositor
 
     public function presenter()
     {
-        return ClientPresenter::class;
+        return ProjectMemberPresenter::class;
+    }
+
+    public function getMember($project_id, $member_id)
+    {
+        return ProjectMember::where(['project_id'=>$project_id,'user_id'=>$member_id])->get();
     }
 }
