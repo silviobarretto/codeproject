@@ -35,12 +35,30 @@ config.vendor_path_css = [
 ];
 
 config.build_path_html = config.build_path + '/views';
+config.build_path_font = config.build_path + '/views';
+config.build_path_image = config.build_path + '/views';
 
 gulp.task('copy-html', function() {
     gulp.src([
             config.assets_path + '/js/views/**/*.html'
         ])
         .pipe(gulp.dest(config.build_path_html))
+        .pipe(liveReload());
+});
+
+gulp.task('copy-font', function() {
+    gulp.src([
+            config.assets_path + '/font/views/**/*'
+        ])
+        .pipe(gulp.dest(config.build_path_font))
+        .pipe(liveReload());
+});
+
+gulp.task('copy-image', function() {
+    gulp.src([
+            config.assets_path + '/images/views/**/*'
+        ])
+        .pipe(gulp.dest(config.build_path_image))
         .pipe(liveReload());
 });
 
@@ -77,7 +95,7 @@ gulp.task('clear-build-folder', function() {
 
 //Tarefa default Produção
 gulp.task('default', ['clear-build-folder'], function() {
-    gulp.start('copy-html');
+    gulp.start('copy-html', 'copy-font', 'copy-image');
     elixir(function(mix) {
         mix.styles(config.vendor_path_css.concat([config.assets_path + '/css/**/*.css']),
             'public/css/all.css', config.assets_path);
@@ -90,8 +108,8 @@ gulp.task('default', ['clear-build-folder'], function() {
 //Tarefa interminavel - Watch para DEV
 gulp.task('watch-dev', ['clear-build-folder'], function() {
     liveReload.listen();//escutando mudanças
-    gulp.start('copy-styles', 'copy-scripts', 'copy-html');
+    gulp.start('copy-styles', 'copy-scripts', 'copy-html', 'copy-font', 'copy-image');
     gulp.watch(config.assets_path + '/**', [
-        'copy-styles', 'copy-scripts', 'copy-html'
+        'copy-styles', 'copy-scripts', 'copy-html', 'copy-font', 'copy-image'
     ]);
 });
