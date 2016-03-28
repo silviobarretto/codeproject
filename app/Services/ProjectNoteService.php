@@ -6,10 +6,10 @@
  * Time: 13:46
  */
 
-namespace CodeProject\Services;
+namespace CarreiraEad\Services;
 
-use CodeProject\Repositories\ProjectNoteRepository;
-use CodeProject\Validators\ProjectNoteValidator;
+use CarreiraEad\Repositories\ProjectNoteRepository;
+use CarreiraEad\Validators\ProjectNoteValidator;
 use Prettus\Validator\Exceptions\ValidatorException;
 
 class ProjectNoteService

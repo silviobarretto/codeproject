@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model'  => CodeProject\User::class,
+        'model'  => CarreiraEad\User::class,
         'key'    => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

@@ -1,12 +1,12 @@
 <?php
 
-namespace CodeProject\Repositories;
+namespace CarreiraEad\Repositories;
 
 use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Interface ProjectRepository
- * @package namespace CodeProject\Repositories;
+ * @package namespace CarreiraEad\Repositories;
  */
 interface ProjectRepository extends RepositoryInterface
 {

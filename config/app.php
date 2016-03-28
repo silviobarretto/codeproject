@@ -156,11 +156,11 @@ return [
         /*
          * Application Service Providers...
          */
-        CodeProject\Providers\AppServiceProvider::class,
-        CodeProject\Providers\AuthServiceProvider::class,
-        CodeProject\Providers\EventServiceProvider::class,
-        CodeProject\Providers\RouteServiceProvider::class,
-        CodeProject\Providers\CodeProjectRepositoryProvider::class
+        CarreiraEad\Providers\AppServiceProvider::class,
+        CarreiraEad\Providers\AuthServiceProvider::class,
+        CarreiraEad\Providers\EventServiceProvider::class,
+        CarreiraEad\Providers\RouteServiceProvider::class,
+        CarreiraEad\Providers\CarreiraEadRepositoryProvider::class
 
     ],
 

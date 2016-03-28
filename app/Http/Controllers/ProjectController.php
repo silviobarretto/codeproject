@@ -1,9 +1,9 @@
 <?php
 
-namespace CodeProject\Http\Controllers;
+namespace CarreiraEad\Http\Controllers;
 
-use CodeProject\Repositories\ProjectRepository;
-use CodeProject\Services\ProjectService;
+use CarreiraEad\Repositories\ProjectRepository;
+use CarreiraEad\Services\ProjectService;
 use Illuminate\Http\Request;
 use LucaDegasperi\OAuth2Server\Facades\Authorizer;
 

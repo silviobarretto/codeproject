@@ -34,6 +34,7 @@ Route::post('oauth/access_token', function () {
 Route::group(['middleware' => ['oauth']], function () {
     Route::resource('client', 'ClientController', ['except' => ['create', 'edit']]);
 
+    //PROJECT
     Route::resource('project', 'ProjectController', ['except' => ['create', 'edit']]);
 
     Route::group(['prefix' => 'project'], function() {
@@ -46,6 +47,10 @@ Route::group(['middleware' => ['oauth']], function () {
 
         Route::post('{id}/file', 'ProjectFileController@store');
     });
+
+    //CURSO
+
+    Route::resource('curso', 'CursoController', ['except' => ['create', 'edit']]);
 
     Route::get('user/authenticated', 'UserController@authenticated');
 });

@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeProject\Providers;
+namespace CarreiraEad\Providers;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'CodeProject\Events\SomeEvent' => [
-            'CodeProject\Listeners\EventListener',
+        'CarreiraEad\Events\SomeEvent' => [
+            'CarreiraEad\Listeners\EventListener',
         ],
     ];
 

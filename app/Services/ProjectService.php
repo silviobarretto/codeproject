@@ -6,11 +6,11 @@
  * Time: 13:46
  */
 
-namespace CodeProject\Services;
+namespace CarreiraEad\Services;
 
 
-use CodeProject\Repositories\ProjectRepository;
-use CodeProject\Validators\ProjectValidator;
+use CarreiraEad\Repositories\ProjectRepository;
+use CarreiraEad\Validators\ProjectValidator;
 use Prettus\Validator\Exceptions\ValidatorException;
 
 use Illuminate\Contracts\Filesystem\Factory as Storage;

@@ -6,9 +6,9 @@
  * Time: 09:32
  */
 
-namespace CodeProject\Presenters;
+namespace CarreiraEad\Presenters;
 
-use CodeProject\Transformers\UserTransformer;
+use CarreiraEad\Transformers\UserTransformer;
 use Prettus\Repository\Presenter\FractalPresenter;
 
 class UserPresenter extends FractalPresenter

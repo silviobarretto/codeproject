@@ -6,13 +6,13 @@
  * Time: 09:52
  */
 
-namespace CodeProject\Repositories;
+namespace CarreiraEad\Repositories;
 
 
-use CodeProject\Entities\Client;
+use CarreiraEad\Entities\Client;
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use CodeProject\Presenters\ClientPresenter;
+use CarreiraEad\Presenters\ClientPresenter;
 
 class ClientRepositoryEloquent extends BaseRepository implements ClientRepository
 {

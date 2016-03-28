@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeProject\Exceptions;
+namespace CarreiraEad\Exceptions;
 
 use Exception;
 use Illuminate\Validation\ValidationException;

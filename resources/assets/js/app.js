@@ -64,6 +64,12 @@ app.config(['$routeProvider', '$httpProvider', 'OAuthProvider', 'OAuthTokenProvi
                 controller: 'ClientRemoveController'
             })
 
+            // CURSOS
+            .when('/cursos',{
+                templateUrl: 'build/views/curso/list.html',
+                controller: 'CursoListController'
+            })
+
             //PROJECT
             .when('/projects',{
                 templateUrl: 'build/views/project/list.html',

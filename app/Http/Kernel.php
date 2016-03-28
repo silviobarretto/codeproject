@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeProject\Http;
+namespace CarreiraEad\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -24,7 +24,7 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \CodeProject\Http\Middleware\EncryptCookies::class,
+            \CarreiraEad\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
@@ -44,15 +44,15 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \CodeProject\Http\Middleware\Authenticate::class,
+        'auth' => \CarreiraEad\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'guest' => \CodeProject\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \CarreiraEad\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'csrf'  =>  \CodeProject\Http\Middleware\VerifyCsrfToken::class,
+        'csrf'  =>  \CarreiraEad\Http\Middleware\VerifyCsrfToken::class,
         'oauth' => \LucaDegasperi\OAuth2Server\Middleware\OAuthMiddleware::class,
         'oauth-user' => \LucaDegasperi\OAuth2Server\Middleware\OAuthUserOwnerMiddleware::class,
         'oauth-client' => \LucaDegasperi\OAuth2Server\Middleware\OAuthClientOwnerMiddleware::class,
         'check-authorization-params' => \LucaDegasperi\OAuth2Server\Middleware\CheckAuthCodeRequestMiddleware::class,
-        'CheckProjectOwner' => \CodeProject\Http\Middleware\CheckProjectOwner::class,
+        'CheckProjectOwner' => \CarreiraEad\Http\Middleware\CheckProjectOwner::class,
     ];
 }

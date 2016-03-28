@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeProject\Http\Middleware;
+namespace CarreiraEad\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

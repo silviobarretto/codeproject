@@ -6,7 +6,7 @@
  * Time: 08:17
  */
 
-namespace CodeProject\OAuth;
+namespace CarreiraEad\OAuth;
 
 
 use Illuminate\Support\Facades\Auth;

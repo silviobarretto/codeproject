@@ -6,10 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Laravel</title>
 	@if(Config::get('app.debug'))
-		<link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
 		<link rel="stylesheet" href="{{ asset('build/css/components.css') }}">
 		<link rel="stylesheet" href="{{ asset('build/css/flaticon.css') }}">
 		<link rel="stylesheet" href="{{ asset('build/css/font-awesome.css') }}">
+		<link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
 	@else
 		<link rel="stylesheet" href="{{ elixir('css/all.css') }}">
 	@endif
@@ -92,6 +92,11 @@
 	<script src="{{ asset('build/js/controllers/client/clientEdit.js') }}"></script>
 	<script src="{{ asset('build/js/controllers/client/clientRemove.js') }}"></script>
 
+	<script src="{{ asset('build/js/controllers/curso/cursoList.js') }}"></script>
+	<script src="{{ asset('build/js/controllers/curso/cursoNew.js') }}"></script>
+	<script src="{{ asset('build/js/controllers/curso/cursoEdit.js') }}"></script>
+	<script src="{{ asset('build/js/controllers/curso/cursoRemove.js') }}"></script>
+
 	<script src="{{ asset('build/js/controllers/project/projectList.js') }}"></script>
 	<script src="{{ asset('build/js/controllers/project/projectNew.js') }}"></script>
 	<script src="{{ asset('build/js/controllers/project/projectEdit.js') }}"></script>
@@ -105,6 +110,7 @@
 
 	<!-- Services !-->
 	<script src="{{ asset('build/js/services/client.js') }}"></script>
+	<script src="{{ asset('build/js/services/curso.js') }}"></script>
 	<script src="{{ asset('build/js/services/project.js') }}"></script>
     <script src="{{ asset('build/js/services/projectNote.js') }}"></script>
 	<script src="{{ asset('build/js/services/user.js') }}"></script>

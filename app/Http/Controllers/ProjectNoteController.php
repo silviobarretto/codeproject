@@ -1,9 +1,9 @@
 <?php
 
-namespace CodeProject\Http\Controllers;
+namespace CarreiraEad\Http\Controllers;
 
-use CodeProject\Repositories\ProjectNoteRepository;
-use CodeProject\Services\ProjectNoteService;
+use CarreiraEad\Repositories\ProjectNoteRepository;
+use CarreiraEad\Services\ProjectNoteService;
 use Illuminate\Http\Request;
 
 class ProjectNoteController extends Controller

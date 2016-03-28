@@ -6,21 +6,21 @@
  * Time: 08:36
  */
 
-namespace CodeProject\Transformers;
+namespace CarreiraEad\Transformers;
 
-use CodeProject\Entities\User;
+use CarreiraEad\Entities\User;
 use League\Fractal\TransformerAbstract;
 
 
 class UserTransformer extends TransformerAbstract
 {
 
-    public function transform(User $model)
+    public function transform(User $user)
     {
         return [
-            'id' => $model->id,
-            'name' => $model->name,
-            'email' => $model->email
+            'id' => $user->id,
+            'name' => $user->name,
+            'email' => $user->email
         ];
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeProject\Providers;
+namespace CarreiraEad\Providers;
 
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -14,7 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'CodeProject\Http\Controllers';
+    protected $namespace = 'CarreiraEad\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.

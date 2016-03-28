@@ -1,6 +1,7 @@
 var elixir = require('laravel-elixir'),
     liveReload = require('gulp-livereload'),
     clean = require('rimraf'),
+    sass = require('gulp-sass'),
     gulp = require('gulp');
 
 var config = {
@@ -62,10 +63,22 @@ gulp.task('copy-image', function() {
         .pipe(liveReload());
 });
 
+gulp.task('comp-sass', function() {
+    gulp.src([
+            config.assets_path + '/sass/**/*'
+        ])
+        .pipe(sass({
+            includePaths: ['./sass'],
+            outputStyle: 'expanded'
+        }))
+        .pipe(gulp.dest(config.build_path_css))
+        .pipe(liveReload());
+});
+
 gulp.task('copy-styles', function() {
     gulp.src([
-       config.assets_path + '/css/**/*.css'
-    ])
+            config.assets_path + '/css/**/*.css'
+        ])
         .pipe(gulp.dest(config.build_path_css))
         .pipe(liveReload());
 
@@ -76,8 +89,8 @@ gulp.task('copy-styles', function() {
 
 gulp.task('copy-scripts', function() {
     gulp.src([
-        config.assets_path + '/js/**/*.js'
-    ])
+            config.assets_path + '/js/**/*.js'
+        ])
         .pipe(gulp.dest(config.build_path_js))
         //Exibindo no terminal
         .pipe(liveReload());
@@ -95,7 +108,7 @@ gulp.task('clear-build-folder', function() {
 
 //Tarefa default Produção
 gulp.task('default', ['clear-build-folder'], function() {
-    gulp.start('copy-html', 'copy-font', 'copy-image');
+    gulp.start('copy-html', 'copy-font', 'copy-image', 'comp-sass');
     elixir(function(mix) {
         mix.styles(config.vendor_path_css.concat([config.assets_path + '/css/**/*.css']),
             'public/css/all.css', config.assets_path);
@@ -108,8 +121,8 @@ gulp.task('default', ['clear-build-folder'], function() {
 //Tarefa interminavel - Watch para DEV
 gulp.task('watch-dev', ['clear-build-folder'], function() {
     liveReload.listen();//escutando mudanças
-    gulp.start('copy-styles', 'copy-scripts', 'copy-html', 'copy-font', 'copy-image');
+    gulp.start('copy-styles', 'copy-scripts', 'copy-html', 'copy-font', 'copy-image', 'comp-sass');
     gulp.watch(config.assets_path + '/**', [
-        'copy-styles', 'copy-scripts', 'copy-html', 'copy-font', 'copy-image'
+        'copy-styles', 'copy-scripts', 'copy-html', 'copy-font', 'copy-image', 'comp-sass'
     ]);
 });

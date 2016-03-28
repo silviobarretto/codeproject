@@ -11,10 +11,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \CodeProject\Entities\User::truncate();
-        ////\CodeProject\Entities\Client::truncate();
-        //\CodeProject\Entities\Project::truncate();
-        //\CodeProject\Entities\ProjectNote::truncate();
+        // \CarreiraEad\Entities\User::truncate();
+        ////\CarreiraEad\Entities\Client::truncate();
+        //\CarreiraEad\Entities\Project::truncate();
+        //\CarreiraEad\Entities\ProjectNote::truncate();
 
         $this->call(UserTableSeeder::class);
         $this->call(ClientTableSeeder::class);
@@ -23,6 +23,6 @@ class DatabaseSeeder extends Seeder
 
 
         //TODO confirmar se necessita
-        Model::reguard();
+        //Model::reguard();
     }
 }

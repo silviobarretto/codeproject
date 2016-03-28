@@ -6,9 +6,9 @@
  * Time: 09:32
  */
 
-namespace CodeProject\Presenters;
+namespace CarreiraEad\Presenters;
 
-use CodeProject\Transformers\ProjectNoteTransformer;
+use CarreiraEad\Transformers\ProjectNoteTransformer;
 use Prettus\Repository\Presenter\FractalPresenter;
 
 class ProjectNotePresenter extends FractalPresenter

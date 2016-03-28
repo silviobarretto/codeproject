@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeProject\Providers;
+namespace CarreiraEad\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

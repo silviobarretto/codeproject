@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeProject\Entities;
+namespace CarreiraEad\Entities;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 

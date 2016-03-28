@@ -219,7 +219,7 @@ return [
     */
     'generator'=>[
         'basePath'=>app_path(),
-        'rootNamespace'=>'CodeProject\\',
+        'rootNamespace'=>'CarreiraEad\\',
         'paths'=>[
             'models'=>'Entities',
             'repositories'=>'Repositories',

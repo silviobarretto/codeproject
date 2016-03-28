@@ -6,9 +6,9 @@
  * Time: 08:36
  */
 
-namespace CodeProject\Transformers;
+namespace CarreiraEad\Transformers;
 
-use CodeProject\Entities\ProjectNote;
+use CarreiraEad\Entities\ProjectNote;
 use League\Fractal\TransformerAbstract;
 
 
@@ -16,15 +16,13 @@ class ProjectNoteTransformer extends TransformerAbstract
 {
     //protected $defaultIncludes = ['members'];
 
-    public function transform(ProjectNote $model)
+    public function transform(ProjectNote $o)
     {
         return [
-            'id' => $model->id,
-            'project_id' => $model->project_id,
-            'title' => $model->title,
-            'note' => $model->note,
-            'created_at' => $model->created_at,
-            'updated_at' => $model->updated_at
+            'id' => $o->id,
+            'project_id' => $o->project_id,
+            'title' => $o->title,
+            'note' => $o->note
         ];
     }
 }

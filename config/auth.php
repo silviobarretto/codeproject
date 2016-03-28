@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => CodeProject\Entities\User::class,
+            'model' => CarreiraEad\Entities\User::class,
         ],
 
         // 'users' => [

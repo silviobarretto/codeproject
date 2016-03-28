@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeProject\Entities;
+namespace CarreiraEad\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;

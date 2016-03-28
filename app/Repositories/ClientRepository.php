@@ -6,7 +6,7 @@
  * Time: 10:07
  */
 
-namespace CodeProject\Repositories;
+namespace CarreiraEad\Repositories;
 
 
 use Prettus\Repository\Contracts\RepositoryInterface;

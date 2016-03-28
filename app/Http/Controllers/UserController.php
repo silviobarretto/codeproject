@@ -1,9 +1,9 @@
 <?php
 
-namespace CodeProject\Http\Controllers;
+namespace CarreiraEad\Http\Controllers;
 
-use CodeProject\Http\Requests;
-use CodeProject\Repositories\UserRepository;
+use CarreiraEad\Http\Requests;
+use CarreiraEad\Repositories\UserRepository;
 use LucaDegasperi\OAuth2Server\Facades\Authorizer;
 
 class UserController extends Controller
@@ -19,7 +19,6 @@ class UserController extends Controller
      */
     public function __construct(UserRepository $repository)
     {
-
         $this->repository = $repository;
     }
 

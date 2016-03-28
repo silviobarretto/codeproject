@@ -1,15 +1,15 @@
 <?php
 
-namespace CodeProject\Repositories;
+namespace CarreiraEad\Repositories;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use CodeProject\Entities\Project;
-use CodeProject\Presenters\ProjectPresenter;
+use CarreiraEad\Entities\Project;
+use CarreiraEad\Presenters\ProjectPresenter;
 
 /**
  * Class ProjectRepositoryEloquent
- * @package namespace CodeProject\Repositories;
+ * @package namespace CarreiraEad\Repositories;
  */
 class ProjectRepositoryEloquent extends BaseRepository implements ProjectRepository
 {

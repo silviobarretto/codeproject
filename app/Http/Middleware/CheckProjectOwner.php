@@ -1,9 +1,9 @@
 <?php
 
-namespace CodeProject\Http\Middleware;
+namespace CarreiraEad\Http\Middleware;
 
 use Closure;
-use CodeProject\Repositories\ProjectRepository;
+use CarreiraEad\Repositories\ProjectRepository;
 use LucaDegasperi\OAuth2Server\Facades\Authorizer;
 
 class CheckProjectOwner

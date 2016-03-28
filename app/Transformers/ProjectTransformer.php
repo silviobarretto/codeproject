@@ -6,10 +6,9 @@
  * Time: 08:36
  */
 
-namespace CodeProject\Transformers;
+namespace CarreiraEad\Transformers;
 
-use CodeProject\Entities\Project;
-use CodeProject\Entities\User;
+use CarreiraEad\Entities\Project;
 use League\Fractal\TransformerAbstract;
 
 
@@ -17,34 +16,33 @@ class ProjectTransformer extends TransformerAbstract
 {
     protected $defaultIncludes = ['members', 'client', 'owner'];
 
-    public function transform(Project $model)
+    public function transform(Project $project)
     {
         return [
-            'id' => $model->id,
-            'client_id' => $model->client_id,
-            'owner_id' => $model->owner_id,
-            'name' => $model->name,
-            'description' => $model->description,
-            'progress' => $model->progress,
-            'status' => $model->status,
-            'due_date' => $model->due_date,
-            'created_at' => $model->created_at,
-            'updated_at' => $model->updated_at
+            'id' => $project->id,
+            'client_id' => $project->client_id,
+            'owner_id' => $project->owner_id,
+            'name' => $project->name,
+            'description' => $project->description,
+            'progress' => $project->progress,
+            'status' => $project->status,
+            'due_date' => $project->due_date,
+            'is_member' => $project->owner_id != \Authorizer::getResourceOwnerId()
         ];
     }
 
-    public function includeMembers(Project $model)
+    public function includeMembers(Project $project)
     {
-        return $this->collection($model->members, new ProjectMemberTransformer());
+        return $this->collection($project->members, new ProjectMemberTransformer());
     }
 
-    public function includeClient(Project $model)
+    public function includeClient(Project $project)
     {
-        return $this->item($model->client, new ClientTransformer());
+        return $this->item($project->client, new ClientTransformer());
     }
 
-    public function includeOwner(Project $model)
+    public function includeOwner(Project $project)
     {
-        return $this->item($model->owner, new UserTransformer());
+        return $this->item($project->owner, new UserTransformer());
     }
 }

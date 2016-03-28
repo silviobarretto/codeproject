@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(CodeProject\Entities\User::class, function (Faker\Generator $faker) {
+$factory->define(CarreiraEad\Entities\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->email,
@@ -20,7 +20,7 @@ $factory->define(CodeProject\Entities\User::class, function (Faker\Generator $fa
     ];
 });
 
-$factory->define(CodeProject\Entities\Client::class, function (Faker\Generator $faker) {
+$factory->define(CarreiraEad\Entities\Client::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'responsible' => $faker->name,
@@ -31,7 +31,7 @@ $factory->define(CodeProject\Entities\Client::class, function (Faker\Generator $
     ];
 });
 
-$factory->define(CodeProject\Entities\Project::class, function (Faker\Generator $faker) {
+$factory->define(CarreiraEad\Entities\Project::class, function (Faker\Generator $faker) {
     return [
         'owner_id' => rand(1,10),
         'client_id' => rand(1,10),
@@ -43,10 +43,22 @@ $factory->define(CodeProject\Entities\Project::class, function (Faker\Generator 
     ];
 });
 
-$factory->define(CodeProject\Entities\ProjectNote::class, function (Faker\Generator $faker) {
+$factory->define(CarreiraEad\Entities\ProjectNote::class, function (Faker\Generator $faker) {
     return [
         'project_id' => rand(1,10),
         'title' => $faker->word,
         'note' => $faker->paragraph,
+    ];
+});
+
+$factory->define(CarreiraEad\Entities\Curso::class, function (Faker\Generator $faker) {
+    return [
+        'owner_id' => rand(1,10),
+        'client_id' => rand(1,10),
+        'nome' => $faker->name,
+        'validade' => $faker->date('now'),
+        'url' => $faker->url,
+        'data_adicao' => $faker->dateTime('now'),
+        'valor' => $faker->creditCardNumber,
     ];
 });

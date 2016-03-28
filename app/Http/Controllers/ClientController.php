@@ -1,11 +1,11 @@
 <?php
 
-namespace CodeProject\Http\Controllers;
+namespace CarreiraEad\Http\Controllers;
 
-use CodeProject\Repositories\ClientRepository;
-use CodeProject\Services\ClientService;
+use CarreiraEad\Repositories\ClientRepository;
+use CarreiraEad\Services\ClientService;
 use Illuminate\Http\Request;
-//use CodeProject\Http\Requests;
+//use CarreiraEad\Http\Requests;
 
 class ClientController extends Controller
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace CodeProject\Http\Controllers\Auth;
+namespace CarreiraEad\Http\Controllers\Auth;
 
-use CodeProject\Http\Controllers\Controller;
+use CarreiraEad\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class PasswordController extends Controller

@@ -6,11 +6,11 @@
  * Time: 13:46
  */
 
-namespace CodeProject\Services;
+namespace CarreiraEad\Services;
 
 
-use CodeProject\Repositories\ClientRepository;
-use CodeProject\Validators\ClientValidator;
+use CarreiraEad\Repositories\ClientRepository;
+use CarreiraEad\Validators\ClientValidator;
 use Prettus\Validator\Exceptions\ValidatorException;
 
 class ClientService

@@ -6,22 +6,27 @@
  * Time: 08:36
  */
 
-namespace CodeProject\Transformers;
+namespace CarreiraEad\Transformers;
 
-use CodeProject\Entities\User;
+use CarreiraEad\Entities\User;
 use League\Fractal\TransformerAbstract;
 
 
 class ProjectMemberTransformer extends TransformerAbstract
 {
-    public function transform(User $model)
+    protected $defaultIncludes = [
+        'user'
+    ];
+
+    public function transform(User $member)
     {
         return [
-            'member_id' => $model->id,
-            'name' => $model->name,
-            'email' => $model->email,
-            'created_at' => $model->created_at,
-            'updated_at' => $model->updated_at
+            'member_id' => $member->id,
+            'project_id' => $member->project_id
         ];
+    }
+
+    public function includeUser(User $member){
+        return $this->item($member->member, new MemberTransformer());
     }
 }

@@ -6,13 +6,13 @@
  * Time: 09:52
  */
 
-namespace CodeProject\Repositories;
+namespace CarreiraEad\Repositories;
 
 
-use CodeProject\Entities\ProjectMember;
+use CarreiraEad\Entities\ProjectMember;
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use CodeProject\Presenters\ProjectMemberPresenter;
+use CarreiraEad\Presenters\ProjectMemberPresenter;
 
 class ProjectMemberRepositoryEloquent extends BaseRepository implements ProjectMemberRepository
 {
