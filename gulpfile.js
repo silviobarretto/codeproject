@@ -36,8 +36,8 @@ config.vendor_path_css = [
 ];
 
 config.build_path_html = config.build_path + '/views';
-config.build_path_font = config.build_path + '/views';
-config.build_path_image = config.build_path + '/views';
+config.build_path_font = config.build_path + '/fonts';
+config.build_path_image = config.build_path + '/images';
 
 gulp.task('copy-html', function() {
     gulp.src([
@@ -49,7 +49,7 @@ gulp.task('copy-html', function() {
 
 gulp.task('copy-font', function() {
     gulp.src([
-            config.assets_path + '/font/views/**/*'
+            config.assets_path + '/fonts/**/*'
         ])
         .pipe(gulp.dest(config.build_path_font))
         .pipe(liveReload());
@@ -57,7 +57,7 @@ gulp.task('copy-font', function() {
 
 gulp.task('copy-image', function() {
     gulp.src([
-            config.assets_path + '/images/views/**/*'
+            config.assets_path + '/images/**/*'
         ])
         .pipe(gulp.dest(config.build_path_image))
         .pipe(liveReload());
